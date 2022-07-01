@@ -1,0 +1,7 @@
+ const getData = async (country) => {
+
+        await axios(`https://api.openweathermap.org/data/2.5/forecast?q=${country}&lang=tr&units=metric&cnt=7&appid=9920b49eed20fd102c6531ea1d3397fe`).then(
+            (response => setWheatherList(response.data.list))
+        );
+
+    };
